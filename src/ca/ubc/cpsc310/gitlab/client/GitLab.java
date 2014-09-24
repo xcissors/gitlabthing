@@ -40,32 +40,11 @@ public class GitLab implements EntryPoint {
 			+ "attempting to contact the server. Please check your network "
 			+ "connection and try again.";
 
-	private final FlexTable flexTable = new FlexTable();
-
 	final LoadUsersServiceAsync service = GWT.create(LoadUsersService.class);
 	/**
 	 * This is the entry point method.
 	 */
-	public void onModuleLoad() 
-	{
-		
-		service.getUsers(new AsyncCallback<List<IUser>>(){
 
-			@Override
-			public void onFailure(Throwable caught) {
-					Window.alert("Error occured " + caught.getClass() + " : " + caught.getMessage());
-				
-			}
-
-			@Override
-			public void onSuccess(List<IUser> result) {
-				displayUsers(result);
-				
-			}});
-	
-
-		
-	}
 	
 	/**
 	 * Used to display users 
@@ -106,4 +85,3 @@ public class GitLab implements EntryPoint {
 		}
 	}
 }
-

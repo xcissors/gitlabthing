@@ -40,8 +40,6 @@ public class GitLab implements EntryPoint {
 			+ "attempting to contact the server. Please check your network "
 			+ "connection and try again.";
 
-	private final FlexTable flexTable = new FlexTable();
-
 	final LoadUsersServiceAsync service = GWT.create(LoadUsersService.class);
 	/**
 	 * This is the entry point method.

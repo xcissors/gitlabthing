@@ -46,26 +46,7 @@ public class GitLab implements EntryPoint {
 	/**
 	 * This is the entry point method.
 	 */
-	public void onModuleLoad() 
-	{
-		
-		service.getUsers(new AsyncCallback<List<IUser>>(){
 
-			@Override
-			public void onFailure(Throwable caught) {
-					Window.alert("Error occured " + caught.getClass() + " : " + caught.getMessage());
-				
-			}
-
-			@Override
-			public void onSuccess(List<IUser> result) {
-				displayUsers(result);
-				
-			}});
-	
-
-		
-	}
 	
 	/**
 	 * Used to display users 
